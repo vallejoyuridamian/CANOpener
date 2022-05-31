@@ -1,0 +1,124 @@
+Flow report for CanOpener
+Thu Nov 23 18:05:16 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++------------------------------------+-----------------------------------------+
+; Flow Status                        ; Successful - Thu Nov 23 18:05:11 2017   ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name                      ; CanOpener                               ;
+; Top-level Entity Name              ; CanOpener_top                           ;
+; Family                             ; Cyclone III                             ;
+; Device                             ; EP3C16F484C6                            ;
+; Timing Models                      ; Final                                   ;
+; Met timing requirements            ; N/A                                     ;
+; Total logic elements               ; 2,001 / 15,408 ( 13 % )                 ;
+;     Total combinational functions  ; 1,782 / 15,408 ( 12 % )                 ;
+;     Dedicated logic registers      ; 1,139 / 15,408 ( 7 % )                  ;
+; Total registers                    ; 1139                                    ;
+; Total pins                         ; 11 / 347 ( 3 % )                        ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 96,256 / 516,096 ( 19 % )               ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                         ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                           ;
++------------------------------------+-----------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/23/2017 18:04:31 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; CanOpener           ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                          ;
++------------------------------------+---------------------------------------------------------------------+---------------+---------------+----------------+
+; Assignment Name                    ; Value                                                               ; Default Value ; Entity Name   ; Section Id     ;
++------------------------------------+---------------------------------------------------------------------+---------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 53350626607583.151147107108176                                      ; --            ; --            ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                                  ; --            ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                                   ; --            ; --            ; --             ;
+; MISC_FILE                          ; C:/Users/joseb/Dropbox/FING/DisLog2/Proyecto/05_Final/CanOpener.dpf ; --            ; --            ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE        ; 1.2V                                                                ; --            ; --            ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                            ; --            ; CanOpener_top ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                              ; --            ; CanOpener_top ; Top            ;
+; SOPC_BUILDER_SIGNATURE_ID          ; 685D43A8E3D20000015FDB2E288D                                        ; --            ; --            ; --             ;
+; TOP_LEVEL_ENTITY                   ; CanOpener_top                                                       ; CanOpener     ; --            ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                 ; --            ; --            ; eda_blast_fpga ;
++------------------------------------+---------------------------------------------------------------------+---------------+---------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 303 MB              ; 00:00:14                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 360 MB              ; 00:00:12                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 265 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 291 MB              ; 00:00:04                           ;
+; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:33                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-P06KEIL  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-P06KEIL  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-P06KEIL  ; Windows Vista ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-P06KEIL  ; Windows Vista ; 6.2        ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off CanOpener -c CanOpener
+quartus_fit --read_settings_files=off --write_settings_files=off CanOpener -c CanOpener
+quartus_asm --read_settings_files=off --write_settings_files=off CanOpener -c CanOpener
+quartus_sta CanOpener -c CanOpener
+
+
+

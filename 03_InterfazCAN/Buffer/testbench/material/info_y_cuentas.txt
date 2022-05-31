@@ -1,0 +1,109 @@
+Páginas culs
+conversor binario a hex :		http://www.binaryhexconverter.com/
+Protocolo CAN:					https://es.wikipedia.org/wiki/Bus_CAN
+Protocolo CAN y fuente C:		http://blog.qartis.com/can-bus/
+CRC VHDL :						http://vhdlguru.blogspot.com.uy/2015/11/part-2-vhdl-code-for-cyclic-reduntancy.html
+Compilador C online:			https://www.tutorialspoint.com/compile_c_online.php
+Divisor polinomial binario:		http://www.ee.unb.ca/cgi-bin/tervo/calc.pl
+
+
+--A guardar en el FIFO--
+Direccion
+00000010100 = 20
+Largo
+0001 = 1
+Data
+0x0000000000000001 = 1
+Flag_CRC_OK
+1 = 1
+-----------------------
+
+cuenta a manopla
+
+10100000000100000001000000000000000             
+1100010110011001|||||||||||||||||||       
+----------------                                
+x1100101100010010	 
+ 1100010110011001||||||||||||||||||				
+ ----------------								
+ x0001110100010110010
+     1100010110011001||||||||||||||
+	 ----------------
+	 x01011010010101100
+	   1100010110011001||||||||||||
+	   ----------------
+	   x1110001001101010
+	    1100010110011001|||||||||||
+		----------------
+		x01001111111001100
+		  1100010110011001|||||||||
+		  ----------------
+		  x1011010010101010
+		   1100010110011001||||||||
+		   ----------------
+		   x1110001001100110
+		    1100010110011001|||||||
+			----------------
+			x01001111111111100
+			  1100010110011001|||||
+			  ----------------
+			  x1011010011001010
+			   1100010110011001||||
+			   ----------------
+			   x1110001010100110
+			    1100010110011001|||
+			    ----------------
+				x01001110011111100
+				  1100010110011001|
+			      ----------------
+				  x1011001011001010
+				   1100010110011001
+				   ----------------
+				   0111011101010011
+				  
+
+lo que da en la imagen = 00100001 10000000 	= 0x2180	   			
+lo que tiene que dar   = 01110111 01010011	= 0x7753 = 30547
+
+-- como calculo el crc--
+voy leyendo data_in y haciendo un shift register del CRC
+si el bit mas significativo es 1, hago el xor con el polinomio
+hago esto para todos los campos incluyendo el CRC
+si todo está bien, al final tiene que valer todo cero								
+
+
+---------------
+Mensaje del OBD
+---------------
+7DF 8 2 1 0 0 0 0 0 0
+
+direccion 7DF, tienen que ser 11 bytes
+
+0(sof)7DF...  dos ceros de stuffing 000 (reqerm id res)
+
+
+0(sof)111110(stuff)0111110(stuff)000(reqerm id res)01000(dataend)
+
+00100000100000100000100000100000100000100000100000100000100000100000100000100 (data+stuff)
+
+
+01111100111110000100000100000100000100000100000100000100000100000100000100000100000100000100000100 (con stuffing pero falta el CRC)
+
+11 11101111 10001000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 (sin stuff)
+
+0x03 0xEF 0x88 0x00
+
+
+polinomio divisor (C599)
+1100010110011001
+
+HEX (sin stuff) = 3E F8 80 00 00 00 00 00 00 00 00
+
+CRC = 788 = 000011110001000 (15b) 788x = 1928
+
+mensaje a meter (con el relleno choto de 5 unos un reset y 7 unos al principio)
+
+1111101111111011111001111100001000001000001000001000001000001000001000001000001000001000001000001000001000001000001011110001000
+
+
+0110010110001001 me está dando el xor

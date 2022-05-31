@@ -1,0 +1,636 @@
+Simulator report for shift_register
+Wed Oct 04 18:37:08 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 437 nodes    ;
+; Simulation Coverage         ;      90.62 % ;
+; Total Number of Transitions ; 20296        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      90.62 % ;
+; Total nodes checked                                 ; 437          ;
+; Total output ports checked                          ; 437          ;
+; Total output ports with complete 1/0-value coverage ; 396          ;
+; Total output ports with no 1/0-value coverage       ; 37           ;
+; Total output ports with no 1-value coverage         ; 37           ;
+; Total output ports with no 0-value coverage         ; 41           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |shift_register|s_data_out~0    ; |shift_register|s_data_out~0    ; out              ;
+; |shift_register|s_data_out~1    ; |shift_register|s_data_out~1    ; out              ;
+; |shift_register|s_data_out~2    ; |shift_register|s_data_out~2    ; out              ;
+; |shift_register|s_data_out~3    ; |shift_register|s_data_out~3    ; out              ;
+; |shift_register|s_data_out~4    ; |shift_register|s_data_out~4    ; out              ;
+; |shift_register|s_data_out~5    ; |shift_register|s_data_out~5    ; out              ;
+; |shift_register|s_data_out~6    ; |shift_register|s_data_out~6    ; out              ;
+; |shift_register|s_data_out~7    ; |shift_register|s_data_out~7    ; out              ;
+; |shift_register|s_data_out~8    ; |shift_register|s_data_out~8    ; out              ;
+; |shift_register|s_data_out~9    ; |shift_register|s_data_out~9    ; out              ;
+; |shift_register|s_data_out~10   ; |shift_register|s_data_out~10   ; out              ;
+; |shift_register|s_data_out~11   ; |shift_register|s_data_out~11   ; out              ;
+; |shift_register|s_data_out~12   ; |shift_register|s_data_out~12   ; out              ;
+; |shift_register|s_data_out~13   ; |shift_register|s_data_out~13   ; out              ;
+; |shift_register|s_data_out~14   ; |shift_register|s_data_out~14   ; out              ;
+; |shift_register|s_data_out~15   ; |shift_register|s_data_out~15   ; out              ;
+; |shift_register|s_data_out~16   ; |shift_register|s_data_out~16   ; out              ;
+; |shift_register|s_data_out~17   ; |shift_register|s_data_out~17   ; out              ;
+; |shift_register|s_data_out~18   ; |shift_register|s_data_out~18   ; out              ;
+; |shift_register|s_data_out~19   ; |shift_register|s_data_out~19   ; out              ;
+; |shift_register|s_data_out~20   ; |shift_register|s_data_out~20   ; out              ;
+; |shift_register|s_data_out~21   ; |shift_register|s_data_out~21   ; out              ;
+; |shift_register|s_data_out~22   ; |shift_register|s_data_out~22   ; out              ;
+; |shift_register|s_data_out~23   ; |shift_register|s_data_out~23   ; out              ;
+; |shift_register|s_data_out~24   ; |shift_register|s_data_out~24   ; out              ;
+; |shift_register|s_data_out~25   ; |shift_register|s_data_out~25   ; out              ;
+; |shift_register|s_data_out~26   ; |shift_register|s_data_out~26   ; out              ;
+; |shift_register|s_data_out~27   ; |shift_register|s_data_out~27   ; out              ;
+; |shift_register|s_data_out~28   ; |shift_register|s_data_out~28   ; out              ;
+; |shift_register|s_data_out~29   ; |shift_register|s_data_out~29   ; out              ;
+; |shift_register|s_data_out~30   ; |shift_register|s_data_out~30   ; out              ;
+; |shift_register|s_data_out~31   ; |shift_register|s_data_out~31   ; out              ;
+; |shift_register|s_data_out~32   ; |shift_register|s_data_out~32   ; out              ;
+; |shift_register|s_data_out~33   ; |shift_register|s_data_out~33   ; out              ;
+; |shift_register|s_data_out~34   ; |shift_register|s_data_out~34   ; out              ;
+; |shift_register|s_data_out~35   ; |shift_register|s_data_out~35   ; out              ;
+; |shift_register|s_data_out~36   ; |shift_register|s_data_out~36   ; out              ;
+; |shift_register|s_data_out~37   ; |shift_register|s_data_out~37   ; out              ;
+; |shift_register|s_data_out~38   ; |shift_register|s_data_out~38   ; out              ;
+; |shift_register|s_data_out~39   ; |shift_register|s_data_out~39   ; out              ;
+; |shift_register|s_data_out~40   ; |shift_register|s_data_out~40   ; out              ;
+; |shift_register|s_data_out~41   ; |shift_register|s_data_out~41   ; out              ;
+; |shift_register|s_data_out~42   ; |shift_register|s_data_out~42   ; out              ;
+; |shift_register|s_data_out~43   ; |shift_register|s_data_out~43   ; out              ;
+; |shift_register|s_data_out~44   ; |shift_register|s_data_out~44   ; out              ;
+; |shift_register|s_data_out~45   ; |shift_register|s_data_out~45   ; out              ;
+; |shift_register|s_data_out~46   ; |shift_register|s_data_out~46   ; out              ;
+; |shift_register|s_data_out~47   ; |shift_register|s_data_out~47   ; out              ;
+; |shift_register|s_data_out~48   ; |shift_register|s_data_out~48   ; out              ;
+; |shift_register|s_data_out~49   ; |shift_register|s_data_out~49   ; out              ;
+; |shift_register|s_data_out~50   ; |shift_register|s_data_out~50   ; out              ;
+; |shift_register|s_data_out~51   ; |shift_register|s_data_out~51   ; out              ;
+; |shift_register|s_data_out~52   ; |shift_register|s_data_out~52   ; out              ;
+; |shift_register|s_data_out~53   ; |shift_register|s_data_out~53   ; out              ;
+; |shift_register|s_data_out~54   ; |shift_register|s_data_out~54   ; out              ;
+; |shift_register|s_data_out~55   ; |shift_register|s_data_out~55   ; out              ;
+; |shift_register|s_data_out~56   ; |shift_register|s_data_out~56   ; out              ;
+; |shift_register|s_data_out~57   ; |shift_register|s_data_out~57   ; out              ;
+; |shift_register|s_data_out~58   ; |shift_register|s_data_out~58   ; out              ;
+; |shift_register|s_data_out~59   ; |shift_register|s_data_out~59   ; out              ;
+; |shift_register|s_data_out~60   ; |shift_register|s_data_out~60   ; out              ;
+; |shift_register|s_data_out~61   ; |shift_register|s_data_out~61   ; out              ;
+; |shift_register|s_data_out~62   ; |shift_register|s_data_out~62   ; out              ;
+; |shift_register|s_data_out~63   ; |shift_register|s_data_out~63   ; out              ;
+; |shift_register|s_data_out~64   ; |shift_register|s_data_out~64   ; out              ;
+; |shift_register|s_data_out~65   ; |shift_register|s_data_out~65   ; out              ;
+; |shift_register|s_data_out~66   ; |shift_register|s_data_out~66   ; out              ;
+; |shift_register|s_data_out~67   ; |shift_register|s_data_out~67   ; out              ;
+; |shift_register|s_data_out~68   ; |shift_register|s_data_out~68   ; out              ;
+; |shift_register|s_data_out~69   ; |shift_register|s_data_out~69   ; out              ;
+; |shift_register|s_data_out~70   ; |shift_register|s_data_out~70   ; out              ;
+; |shift_register|s_data_out~71   ; |shift_register|s_data_out~71   ; out              ;
+; |shift_register|s_data_out~72   ; |shift_register|s_data_out~72   ; out              ;
+; |shift_register|s_data_out~73   ; |shift_register|s_data_out~73   ; out              ;
+; |shift_register|s_data_out~74   ; |shift_register|s_data_out~74   ; out              ;
+; |shift_register|s_data_out~75   ; |shift_register|s_data_out~75   ; out              ;
+; |shift_register|s_data_out~76   ; |shift_register|s_data_out~76   ; out              ;
+; |shift_register|s_data_out~77   ; |shift_register|s_data_out~77   ; out              ;
+; |shift_register|s_data_out~78   ; |shift_register|s_data_out~78   ; out              ;
+; |shift_register|s_data_out~79   ; |shift_register|s_data_out~79   ; out              ;
+; |shift_register|s_data_out~80   ; |shift_register|s_data_out~80   ; out              ;
+; |shift_register|s_data_out~81   ; |shift_register|s_data_out~81   ; out              ;
+; |shift_register|s_data_out~82   ; |shift_register|s_data_out~82   ; out              ;
+; |shift_register|s_data_out~83   ; |shift_register|s_data_out~83   ; out              ;
+; |shift_register|s_data_out~84   ; |shift_register|s_data_out~84   ; out              ;
+; |shift_register|s_data_out~85   ; |shift_register|s_data_out~85   ; out              ;
+; |shift_register|s_data_out~86   ; |shift_register|s_data_out~86   ; out              ;
+; |shift_register|s_data_out~87   ; |shift_register|s_data_out~87   ; out              ;
+; |shift_register|s_data_out~88   ; |shift_register|s_data_out~88   ; out              ;
+; |shift_register|s_data_out~89   ; |shift_register|s_data_out~89   ; out              ;
+; |shift_register|s_data_out~90   ; |shift_register|s_data_out~90   ; out              ;
+; |shift_register|s_data_out~91   ; |shift_register|s_data_out~91   ; out              ;
+; |shift_register|s_data_out~92   ; |shift_register|s_data_out~92   ; out              ;
+; |shift_register|s_data_out~93   ; |shift_register|s_data_out~93   ; out              ;
+; |shift_register|s_data_out~94   ; |shift_register|s_data_out~94   ; out              ;
+; |shift_register|s_data_out~95   ; |shift_register|s_data_out~95   ; out              ;
+; |shift_register|s_data_out~96   ; |shift_register|s_data_out~96   ; out              ;
+; |shift_register|s_data_out~97   ; |shift_register|s_data_out~97   ; out              ;
+; |shift_register|s_data_out~98   ; |shift_register|s_data_out~98   ; out              ;
+; |shift_register|s_data_out~108  ; |shift_register|s_data_out~108  ; out              ;
+; |shift_register|s_data_out~109  ; |shift_register|s_data_out~109  ; out              ;
+; |shift_register|s_data_out~110  ; |shift_register|s_data_out~110  ; out              ;
+; |shift_register|s_data_out~111  ; |shift_register|s_data_out~111  ; out              ;
+; |shift_register|s_data_out~112  ; |shift_register|s_data_out~112  ; out              ;
+; |shift_register|s_data_out~113  ; |shift_register|s_data_out~113  ; out              ;
+; |shift_register|s_data_out~114  ; |shift_register|s_data_out~114  ; out              ;
+; |shift_register|s_data_out~115  ; |shift_register|s_data_out~115  ; out              ;
+; |shift_register|s_data_out~116  ; |shift_register|s_data_out~116  ; out              ;
+; |shift_register|s_data_out~117  ; |shift_register|s_data_out~117  ; out              ;
+; |shift_register|s_data_out~118  ; |shift_register|s_data_out~118  ; out              ;
+; |shift_register|s_data_out~119  ; |shift_register|s_data_out~119  ; out              ;
+; |shift_register|s_data_out~120  ; |shift_register|s_data_out~120  ; out              ;
+; |shift_register|s_data_out~121  ; |shift_register|s_data_out~121  ; out              ;
+; |shift_register|s_data_out~122  ; |shift_register|s_data_out~122  ; out              ;
+; |shift_register|s_data_out~123  ; |shift_register|s_data_out~123  ; out              ;
+; |shift_register|s_data_out~124  ; |shift_register|s_data_out~124  ; out              ;
+; |shift_register|s_data_out~125  ; |shift_register|s_data_out~125  ; out              ;
+; |shift_register|s_data_out~126  ; |shift_register|s_data_out~126  ; out              ;
+; |shift_register|s_data_out~127  ; |shift_register|s_data_out~127  ; out              ;
+; |shift_register|s_data_out~128  ; |shift_register|s_data_out~128  ; out              ;
+; |shift_register|s_data_out~129  ; |shift_register|s_data_out~129  ; out              ;
+; |shift_register|s_data_out~130  ; |shift_register|s_data_out~130  ; out              ;
+; |shift_register|s_data_out~131  ; |shift_register|s_data_out~131  ; out              ;
+; |shift_register|s_data_out~132  ; |shift_register|s_data_out~132  ; out              ;
+; |shift_register|s_data_out~133  ; |shift_register|s_data_out~133  ; out              ;
+; |shift_register|s_data_out~134  ; |shift_register|s_data_out~134  ; out              ;
+; |shift_register|s_data_out~135  ; |shift_register|s_data_out~135  ; out              ;
+; |shift_register|s_data_out~136  ; |shift_register|s_data_out~136  ; out              ;
+; |shift_register|s_data_out~137  ; |shift_register|s_data_out~137  ; out              ;
+; |shift_register|s_data_out~138  ; |shift_register|s_data_out~138  ; out              ;
+; |shift_register|s_data_out~139  ; |shift_register|s_data_out~139  ; out              ;
+; |shift_register|s_data_out~140  ; |shift_register|s_data_out~140  ; out              ;
+; |shift_register|s_data_out~141  ; |shift_register|s_data_out~141  ; out              ;
+; |shift_register|s_data_out~142  ; |shift_register|s_data_out~142  ; out              ;
+; |shift_register|s_data_out~143  ; |shift_register|s_data_out~143  ; out              ;
+; |shift_register|s_data_out~144  ; |shift_register|s_data_out~144  ; out              ;
+; |shift_register|s_data_out~145  ; |shift_register|s_data_out~145  ; out              ;
+; |shift_register|s_data_out~146  ; |shift_register|s_data_out~146  ; out              ;
+; |shift_register|s_data_out~147  ; |shift_register|s_data_out~147  ; out              ;
+; |shift_register|s_data_out~148  ; |shift_register|s_data_out~148  ; out              ;
+; |shift_register|s_data_out~149  ; |shift_register|s_data_out~149  ; out              ;
+; |shift_register|s_data_out~150  ; |shift_register|s_data_out~150  ; out              ;
+; |shift_register|s_data_out~151  ; |shift_register|s_data_out~151  ; out              ;
+; |shift_register|s_data_out~152  ; |shift_register|s_data_out~152  ; out              ;
+; |shift_register|s_data_out~153  ; |shift_register|s_data_out~153  ; out              ;
+; |shift_register|s_data_out~154  ; |shift_register|s_data_out~154  ; out              ;
+; |shift_register|s_data_out~155  ; |shift_register|s_data_out~155  ; out              ;
+; |shift_register|s_data_out~156  ; |shift_register|s_data_out~156  ; out              ;
+; |shift_register|s_data_out~157  ; |shift_register|s_data_out~157  ; out              ;
+; |shift_register|s_data_out~158  ; |shift_register|s_data_out~158  ; out              ;
+; |shift_register|s_data_out~159  ; |shift_register|s_data_out~159  ; out              ;
+; |shift_register|s_data_out~160  ; |shift_register|s_data_out~160  ; out              ;
+; |shift_register|s_data_out~161  ; |shift_register|s_data_out~161  ; out              ;
+; |shift_register|s_data_out~162  ; |shift_register|s_data_out~162  ; out              ;
+; |shift_register|s_data_out~163  ; |shift_register|s_data_out~163  ; out              ;
+; |shift_register|s_data_out~164  ; |shift_register|s_data_out~164  ; out              ;
+; |shift_register|s_data_out~165  ; |shift_register|s_data_out~165  ; out              ;
+; |shift_register|s_data_out~166  ; |shift_register|s_data_out~166  ; out              ;
+; |shift_register|s_data_out~167  ; |shift_register|s_data_out~167  ; out              ;
+; |shift_register|s_data_out~168  ; |shift_register|s_data_out~168  ; out              ;
+; |shift_register|s_data_out~169  ; |shift_register|s_data_out~169  ; out              ;
+; |shift_register|s_data_out~170  ; |shift_register|s_data_out~170  ; out              ;
+; |shift_register|s_data_out~171  ; |shift_register|s_data_out~171  ; out              ;
+; |shift_register|s_data_out~172  ; |shift_register|s_data_out~172  ; out              ;
+; |shift_register|s_data_out~173  ; |shift_register|s_data_out~173  ; out              ;
+; |shift_register|s_data_out~174  ; |shift_register|s_data_out~174  ; out              ;
+; |shift_register|s_data_out~175  ; |shift_register|s_data_out~175  ; out              ;
+; |shift_register|s_data_out~176  ; |shift_register|s_data_out~176  ; out              ;
+; |shift_register|s_data_out~177  ; |shift_register|s_data_out~177  ; out              ;
+; |shift_register|s_data_out~178  ; |shift_register|s_data_out~178  ; out              ;
+; |shift_register|s_data_out~179  ; |shift_register|s_data_out~179  ; out              ;
+; |shift_register|s_data_out~180  ; |shift_register|s_data_out~180  ; out              ;
+; |shift_register|s_data_out~181  ; |shift_register|s_data_out~181  ; out              ;
+; |shift_register|s_data_out~182  ; |shift_register|s_data_out~182  ; out              ;
+; |shift_register|s_data_out~183  ; |shift_register|s_data_out~183  ; out              ;
+; |shift_register|s_data_out~184  ; |shift_register|s_data_out~184  ; out              ;
+; |shift_register|s_data_out~185  ; |shift_register|s_data_out~185  ; out              ;
+; |shift_register|s_data_out~186  ; |shift_register|s_data_out~186  ; out              ;
+; |shift_register|s_data_out~187  ; |shift_register|s_data_out~187  ; out              ;
+; |shift_register|s_data_out~188  ; |shift_register|s_data_out~188  ; out              ;
+; |shift_register|s_data_out~189  ; |shift_register|s_data_out~189  ; out              ;
+; |shift_register|s_data_out~190  ; |shift_register|s_data_out~190  ; out              ;
+; |shift_register|s_data_out~191  ; |shift_register|s_data_out~191  ; out              ;
+; |shift_register|s_data_out~192  ; |shift_register|s_data_out~192  ; out              ;
+; |shift_register|s_data_out~193  ; |shift_register|s_data_out~193  ; out              ;
+; |shift_register|s_data_out~194  ; |shift_register|s_data_out~194  ; out              ;
+; |shift_register|s_data_out~195  ; |shift_register|s_data_out~195  ; out              ;
+; |shift_register|s_data_out~196  ; |shift_register|s_data_out~196  ; out              ;
+; |shift_register|s_data_out~197  ; |shift_register|s_data_out~197  ; out              ;
+; |shift_register|s_data_out~198  ; |shift_register|s_data_out~198  ; out              ;
+; |shift_register|s_data_out~199  ; |shift_register|s_data_out~199  ; out              ;
+; |shift_register|s_data_out~200  ; |shift_register|s_data_out~200  ; out              ;
+; |shift_register|s_data_out~201  ; |shift_register|s_data_out~201  ; out              ;
+; |shift_register|s_data_out~202  ; |shift_register|s_data_out~202  ; out              ;
+; |shift_register|s_data_out~203  ; |shift_register|s_data_out~203  ; out              ;
+; |shift_register|s_data_out~204  ; |shift_register|s_data_out~204  ; out              ;
+; |shift_register|s_data_out~205  ; |shift_register|s_data_out~205  ; out              ;
+; |shift_register|s_data_out~206  ; |shift_register|s_data_out~206  ; out              ;
+; |shift_register|s_data_out[107] ; |shift_register|s_data_out[107] ; regout           ;
+; |shift_register|s_data_out[106] ; |shift_register|s_data_out[106] ; regout           ;
+; |shift_register|s_data_out[105] ; |shift_register|s_data_out[105] ; regout           ;
+; |shift_register|s_data_out[104] ; |shift_register|s_data_out[104] ; regout           ;
+; |shift_register|s_data_out[103] ; |shift_register|s_data_out[103] ; regout           ;
+; |shift_register|s_data_out[102] ; |shift_register|s_data_out[102] ; regout           ;
+; |shift_register|s_data_out[101] ; |shift_register|s_data_out[101] ; regout           ;
+; |shift_register|s_data_out[100] ; |shift_register|s_data_out[100] ; regout           ;
+; |shift_register|s_data_out[99]  ; |shift_register|s_data_out[99]  ; regout           ;
+; |shift_register|s_data_out[98]  ; |shift_register|s_data_out[98]  ; regout           ;
+; |shift_register|s_data_out[97]  ; |shift_register|s_data_out[97]  ; regout           ;
+; |shift_register|s_data_out[96]  ; |shift_register|s_data_out[96]  ; regout           ;
+; |shift_register|s_data_out[95]  ; |shift_register|s_data_out[95]  ; regout           ;
+; |shift_register|s_data_out[94]  ; |shift_register|s_data_out[94]  ; regout           ;
+; |shift_register|s_data_out[93]  ; |shift_register|s_data_out[93]  ; regout           ;
+; |shift_register|s_data_out[92]  ; |shift_register|s_data_out[92]  ; regout           ;
+; |shift_register|s_data_out[91]  ; |shift_register|s_data_out[91]  ; regout           ;
+; |shift_register|s_data_out[90]  ; |shift_register|s_data_out[90]  ; regout           ;
+; |shift_register|s_data_out[89]  ; |shift_register|s_data_out[89]  ; regout           ;
+; |shift_register|s_data_out[88]  ; |shift_register|s_data_out[88]  ; regout           ;
+; |shift_register|s_data_out[87]  ; |shift_register|s_data_out[87]  ; regout           ;
+; |shift_register|s_data_out[86]  ; |shift_register|s_data_out[86]  ; regout           ;
+; |shift_register|s_data_out[85]  ; |shift_register|s_data_out[85]  ; regout           ;
+; |shift_register|s_data_out[84]  ; |shift_register|s_data_out[84]  ; regout           ;
+; |shift_register|s_data_out[83]  ; |shift_register|s_data_out[83]  ; regout           ;
+; |shift_register|s_data_out[82]  ; |shift_register|s_data_out[82]  ; regout           ;
+; |shift_register|s_data_out[81]  ; |shift_register|s_data_out[81]  ; regout           ;
+; |shift_register|s_data_out[80]  ; |shift_register|s_data_out[80]  ; regout           ;
+; |shift_register|s_data_out[79]  ; |shift_register|s_data_out[79]  ; regout           ;
+; |shift_register|s_data_out[78]  ; |shift_register|s_data_out[78]  ; regout           ;
+; |shift_register|s_data_out[77]  ; |shift_register|s_data_out[77]  ; regout           ;
+; |shift_register|s_data_out[76]  ; |shift_register|s_data_out[76]  ; regout           ;
+; |shift_register|s_data_out[75]  ; |shift_register|s_data_out[75]  ; regout           ;
+; |shift_register|s_data_out[74]  ; |shift_register|s_data_out[74]  ; regout           ;
+; |shift_register|s_data_out[73]  ; |shift_register|s_data_out[73]  ; regout           ;
+; |shift_register|s_data_out[72]  ; |shift_register|s_data_out[72]  ; regout           ;
+; |shift_register|s_data_out[71]  ; |shift_register|s_data_out[71]  ; regout           ;
+; |shift_register|s_data_out[70]  ; |shift_register|s_data_out[70]  ; regout           ;
+; |shift_register|s_data_out[69]  ; |shift_register|s_data_out[69]  ; regout           ;
+; |shift_register|s_data_out[68]  ; |shift_register|s_data_out[68]  ; regout           ;
+; |shift_register|s_data_out[67]  ; |shift_register|s_data_out[67]  ; regout           ;
+; |shift_register|s_data_out[66]  ; |shift_register|s_data_out[66]  ; regout           ;
+; |shift_register|s_data_out[65]  ; |shift_register|s_data_out[65]  ; regout           ;
+; |shift_register|s_data_out[64]  ; |shift_register|s_data_out[64]  ; regout           ;
+; |shift_register|s_data_out[63]  ; |shift_register|s_data_out[63]  ; regout           ;
+; |shift_register|s_data_out[62]  ; |shift_register|s_data_out[62]  ; regout           ;
+; |shift_register|s_data_out[61]  ; |shift_register|s_data_out[61]  ; regout           ;
+; |shift_register|s_data_out[60]  ; |shift_register|s_data_out[60]  ; regout           ;
+; |shift_register|s_data_out[59]  ; |shift_register|s_data_out[59]  ; regout           ;
+; |shift_register|s_data_out[58]  ; |shift_register|s_data_out[58]  ; regout           ;
+; |shift_register|s_data_out[57]  ; |shift_register|s_data_out[57]  ; regout           ;
+; |shift_register|s_data_out[56]  ; |shift_register|s_data_out[56]  ; regout           ;
+; |shift_register|s_data_out[55]  ; |shift_register|s_data_out[55]  ; regout           ;
+; |shift_register|s_data_out[54]  ; |shift_register|s_data_out[54]  ; regout           ;
+; |shift_register|s_data_out[53]  ; |shift_register|s_data_out[53]  ; regout           ;
+; |shift_register|s_data_out[52]  ; |shift_register|s_data_out[52]  ; regout           ;
+; |shift_register|s_data_out[51]  ; |shift_register|s_data_out[51]  ; regout           ;
+; |shift_register|s_data_out[50]  ; |shift_register|s_data_out[50]  ; regout           ;
+; |shift_register|s_data_out[49]  ; |shift_register|s_data_out[49]  ; regout           ;
+; |shift_register|s_data_out[48]  ; |shift_register|s_data_out[48]  ; regout           ;
+; |shift_register|s_data_out[47]  ; |shift_register|s_data_out[47]  ; regout           ;
+; |shift_register|s_data_out[46]  ; |shift_register|s_data_out[46]  ; regout           ;
+; |shift_register|s_data_out[45]  ; |shift_register|s_data_out[45]  ; regout           ;
+; |shift_register|s_data_out[44]  ; |shift_register|s_data_out[44]  ; regout           ;
+; |shift_register|s_data_out[43]  ; |shift_register|s_data_out[43]  ; regout           ;
+; |shift_register|s_data_out[42]  ; |shift_register|s_data_out[42]  ; regout           ;
+; |shift_register|s_data_out[41]  ; |shift_register|s_data_out[41]  ; regout           ;
+; |shift_register|s_data_out[40]  ; |shift_register|s_data_out[40]  ; regout           ;
+; |shift_register|s_data_out[39]  ; |shift_register|s_data_out[39]  ; regout           ;
+; |shift_register|s_data_out[38]  ; |shift_register|s_data_out[38]  ; regout           ;
+; |shift_register|s_data_out[37]  ; |shift_register|s_data_out[37]  ; regout           ;
+; |shift_register|s_data_out[36]  ; |shift_register|s_data_out[36]  ; regout           ;
+; |shift_register|s_data_out[35]  ; |shift_register|s_data_out[35]  ; regout           ;
+; |shift_register|s_data_out[34]  ; |shift_register|s_data_out[34]  ; regout           ;
+; |shift_register|s_data_out[33]  ; |shift_register|s_data_out[33]  ; regout           ;
+; |shift_register|s_data_out[32]  ; |shift_register|s_data_out[32]  ; regout           ;
+; |shift_register|s_data_out[31]  ; |shift_register|s_data_out[31]  ; regout           ;
+; |shift_register|s_data_out[30]  ; |shift_register|s_data_out[30]  ; regout           ;
+; |shift_register|s_data_out[29]  ; |shift_register|s_data_out[29]  ; regout           ;
+; |shift_register|s_data_out[28]  ; |shift_register|s_data_out[28]  ; regout           ;
+; |shift_register|s_data_out[27]  ; |shift_register|s_data_out[27]  ; regout           ;
+; |shift_register|s_data_out[26]  ; |shift_register|s_data_out[26]  ; regout           ;
+; |shift_register|s_data_out[25]  ; |shift_register|s_data_out[25]  ; regout           ;
+; |shift_register|s_data_out[24]  ; |shift_register|s_data_out[24]  ; regout           ;
+; |shift_register|s_data_out[23]  ; |shift_register|s_data_out[23]  ; regout           ;
+; |shift_register|s_data_out[22]  ; |shift_register|s_data_out[22]  ; regout           ;
+; |shift_register|s_data_out[21]  ; |shift_register|s_data_out[21]  ; regout           ;
+; |shift_register|s_data_out[20]  ; |shift_register|s_data_out[20]  ; regout           ;
+; |shift_register|s_data_out[19]  ; |shift_register|s_data_out[19]  ; regout           ;
+; |shift_register|s_data_out[18]  ; |shift_register|s_data_out[18]  ; regout           ;
+; |shift_register|s_data_out[17]  ; |shift_register|s_data_out[17]  ; regout           ;
+; |shift_register|s_data_out[16]  ; |shift_register|s_data_out[16]  ; regout           ;
+; |shift_register|s_data_out[15]  ; |shift_register|s_data_out[15]  ; regout           ;
+; |shift_register|s_data_out[14]  ; |shift_register|s_data_out[14]  ; regout           ;
+; |shift_register|s_data_out[13]  ; |shift_register|s_data_out[13]  ; regout           ;
+; |shift_register|s_data_out[12]  ; |shift_register|s_data_out[12]  ; regout           ;
+; |shift_register|s_data_out[11]  ; |shift_register|s_data_out[11]  ; regout           ;
+; |shift_register|s_data_out[10]  ; |shift_register|s_data_out[10]  ; regout           ;
+; |shift_register|clk_in          ; |shift_register|clk_in          ; out              ;
+; |shift_register|data_in         ; |shift_register|data_in         ; out              ;
+; |shift_register|data_out[10]    ; |shift_register|data_out[10]    ; pin_out          ;
+; |shift_register|data_out[11]    ; |shift_register|data_out[11]    ; pin_out          ;
+; |shift_register|data_out[12]    ; |shift_register|data_out[12]    ; pin_out          ;
+; |shift_register|data_out[13]    ; |shift_register|data_out[13]    ; pin_out          ;
+; |shift_register|data_out[14]    ; |shift_register|data_out[14]    ; pin_out          ;
+; |shift_register|data_out[15]    ; |shift_register|data_out[15]    ; pin_out          ;
+; |shift_register|data_out[16]    ; |shift_register|data_out[16]    ; pin_out          ;
+; |shift_register|data_out[17]    ; |shift_register|data_out[17]    ; pin_out          ;
+; |shift_register|data_out[18]    ; |shift_register|data_out[18]    ; pin_out          ;
+; |shift_register|data_out[19]    ; |shift_register|data_out[19]    ; pin_out          ;
+; |shift_register|data_out[20]    ; |shift_register|data_out[20]    ; pin_out          ;
+; |shift_register|data_out[21]    ; |shift_register|data_out[21]    ; pin_out          ;
+; |shift_register|data_out[22]    ; |shift_register|data_out[22]    ; pin_out          ;
+; |shift_register|data_out[23]    ; |shift_register|data_out[23]    ; pin_out          ;
+; |shift_register|data_out[24]    ; |shift_register|data_out[24]    ; pin_out          ;
+; |shift_register|data_out[25]    ; |shift_register|data_out[25]    ; pin_out          ;
+; |shift_register|data_out[26]    ; |shift_register|data_out[26]    ; pin_out          ;
+; |shift_register|data_out[27]    ; |shift_register|data_out[27]    ; pin_out          ;
+; |shift_register|data_out[28]    ; |shift_register|data_out[28]    ; pin_out          ;
+; |shift_register|data_out[29]    ; |shift_register|data_out[29]    ; pin_out          ;
+; |shift_register|data_out[30]    ; |shift_register|data_out[30]    ; pin_out          ;
+; |shift_register|data_out[31]    ; |shift_register|data_out[31]    ; pin_out          ;
+; |shift_register|data_out[32]    ; |shift_register|data_out[32]    ; pin_out          ;
+; |shift_register|data_out[33]    ; |shift_register|data_out[33]    ; pin_out          ;
+; |shift_register|data_out[34]    ; |shift_register|data_out[34]    ; pin_out          ;
+; |shift_register|data_out[35]    ; |shift_register|data_out[35]    ; pin_out          ;
+; |shift_register|data_out[36]    ; |shift_register|data_out[36]    ; pin_out          ;
+; |shift_register|data_out[37]    ; |shift_register|data_out[37]    ; pin_out          ;
+; |shift_register|data_out[38]    ; |shift_register|data_out[38]    ; pin_out          ;
+; |shift_register|data_out[39]    ; |shift_register|data_out[39]    ; pin_out          ;
+; |shift_register|data_out[40]    ; |shift_register|data_out[40]    ; pin_out          ;
+; |shift_register|data_out[41]    ; |shift_register|data_out[41]    ; pin_out          ;
+; |shift_register|data_out[42]    ; |shift_register|data_out[42]    ; pin_out          ;
+; |shift_register|data_out[43]    ; |shift_register|data_out[43]    ; pin_out          ;
+; |shift_register|data_out[44]    ; |shift_register|data_out[44]    ; pin_out          ;
+; |shift_register|data_out[45]    ; |shift_register|data_out[45]    ; pin_out          ;
+; |shift_register|data_out[46]    ; |shift_register|data_out[46]    ; pin_out          ;
+; |shift_register|data_out[47]    ; |shift_register|data_out[47]    ; pin_out          ;
+; |shift_register|data_out[48]    ; |shift_register|data_out[48]    ; pin_out          ;
+; |shift_register|data_out[49]    ; |shift_register|data_out[49]    ; pin_out          ;
+; |shift_register|data_out[50]    ; |shift_register|data_out[50]    ; pin_out          ;
+; |shift_register|data_out[51]    ; |shift_register|data_out[51]    ; pin_out          ;
+; |shift_register|data_out[52]    ; |shift_register|data_out[52]    ; pin_out          ;
+; |shift_register|data_out[53]    ; |shift_register|data_out[53]    ; pin_out          ;
+; |shift_register|data_out[54]    ; |shift_register|data_out[54]    ; pin_out          ;
+; |shift_register|data_out[55]    ; |shift_register|data_out[55]    ; pin_out          ;
+; |shift_register|data_out[56]    ; |shift_register|data_out[56]    ; pin_out          ;
+; |shift_register|data_out[57]    ; |shift_register|data_out[57]    ; pin_out          ;
+; |shift_register|data_out[58]    ; |shift_register|data_out[58]    ; pin_out          ;
+; |shift_register|data_out[59]    ; |shift_register|data_out[59]    ; pin_out          ;
+; |shift_register|data_out[60]    ; |shift_register|data_out[60]    ; pin_out          ;
+; |shift_register|data_out[61]    ; |shift_register|data_out[61]    ; pin_out          ;
+; |shift_register|data_out[62]    ; |shift_register|data_out[62]    ; pin_out          ;
+; |shift_register|data_out[63]    ; |shift_register|data_out[63]    ; pin_out          ;
+; |shift_register|data_out[64]    ; |shift_register|data_out[64]    ; pin_out          ;
+; |shift_register|data_out[65]    ; |shift_register|data_out[65]    ; pin_out          ;
+; |shift_register|data_out[66]    ; |shift_register|data_out[66]    ; pin_out          ;
+; |shift_register|data_out[67]    ; |shift_register|data_out[67]    ; pin_out          ;
+; |shift_register|data_out[68]    ; |shift_register|data_out[68]    ; pin_out          ;
+; |shift_register|data_out[69]    ; |shift_register|data_out[69]    ; pin_out          ;
+; |shift_register|data_out[70]    ; |shift_register|data_out[70]    ; pin_out          ;
+; |shift_register|data_out[71]    ; |shift_register|data_out[71]    ; pin_out          ;
+; |shift_register|data_out[72]    ; |shift_register|data_out[72]    ; pin_out          ;
+; |shift_register|data_out[73]    ; |shift_register|data_out[73]    ; pin_out          ;
+; |shift_register|data_out[74]    ; |shift_register|data_out[74]    ; pin_out          ;
+; |shift_register|data_out[75]    ; |shift_register|data_out[75]    ; pin_out          ;
+; |shift_register|data_out[76]    ; |shift_register|data_out[76]    ; pin_out          ;
+; |shift_register|data_out[77]    ; |shift_register|data_out[77]    ; pin_out          ;
+; |shift_register|data_out[78]    ; |shift_register|data_out[78]    ; pin_out          ;
+; |shift_register|data_out[79]    ; |shift_register|data_out[79]    ; pin_out          ;
+; |shift_register|data_out[80]    ; |shift_register|data_out[80]    ; pin_out          ;
+; |shift_register|data_out[81]    ; |shift_register|data_out[81]    ; pin_out          ;
+; |shift_register|data_out[82]    ; |shift_register|data_out[82]    ; pin_out          ;
+; |shift_register|data_out[83]    ; |shift_register|data_out[83]    ; pin_out          ;
+; |shift_register|data_out[84]    ; |shift_register|data_out[84]    ; pin_out          ;
+; |shift_register|data_out[85]    ; |shift_register|data_out[85]    ; pin_out          ;
+; |shift_register|data_out[86]    ; |shift_register|data_out[86]    ; pin_out          ;
+; |shift_register|data_out[87]    ; |shift_register|data_out[87]    ; pin_out          ;
+; |shift_register|data_out[88]    ; |shift_register|data_out[88]    ; pin_out          ;
+; |shift_register|data_out[89]    ; |shift_register|data_out[89]    ; pin_out          ;
+; |shift_register|data_out[90]    ; |shift_register|data_out[90]    ; pin_out          ;
+; |shift_register|data_out[91]    ; |shift_register|data_out[91]    ; pin_out          ;
+; |shift_register|data_out[92]    ; |shift_register|data_out[92]    ; pin_out          ;
+; |shift_register|data_out[93]    ; |shift_register|data_out[93]    ; pin_out          ;
+; |shift_register|data_out[94]    ; |shift_register|data_out[94]    ; pin_out          ;
+; |shift_register|data_out[95]    ; |shift_register|data_out[95]    ; pin_out          ;
+; |shift_register|data_out[96]    ; |shift_register|data_out[96]    ; pin_out          ;
+; |shift_register|data_out[97]    ; |shift_register|data_out[97]    ; pin_out          ;
+; |shift_register|data_out[98]    ; |shift_register|data_out[98]    ; pin_out          ;
+; |shift_register|data_out[99]    ; |shift_register|data_out[99]    ; pin_out          ;
+; |shift_register|data_out[100]   ; |shift_register|data_out[100]   ; pin_out          ;
+; |shift_register|data_out[101]   ; |shift_register|data_out[101]   ; pin_out          ;
+; |shift_register|data_out[102]   ; |shift_register|data_out[102]   ; pin_out          ;
+; |shift_register|data_out[103]   ; |shift_register|data_out[103]   ; pin_out          ;
+; |shift_register|data_out[104]   ; |shift_register|data_out[104]   ; pin_out          ;
+; |shift_register|data_out[105]   ; |shift_register|data_out[105]   ; pin_out          ;
+; |shift_register|data_out[106]   ; |shift_register|data_out[106]   ; pin_out          ;
+; |shift_register|data_out[107]   ; |shift_register|data_out[107]   ; pin_out          ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |shift_register|s_data_out~100 ; |shift_register|s_data_out~100 ; out              ;
+; |shift_register|s_data_out~101 ; |shift_register|s_data_out~101 ; out              ;
+; |shift_register|s_data_out~102 ; |shift_register|s_data_out~102 ; out              ;
+; |shift_register|s_data_out~103 ; |shift_register|s_data_out~103 ; out              ;
+; |shift_register|s_data_out~104 ; |shift_register|s_data_out~104 ; out              ;
+; |shift_register|s_data_out~105 ; |shift_register|s_data_out~105 ; out              ;
+; |shift_register|s_data_out~106 ; |shift_register|s_data_out~106 ; out              ;
+; |shift_register|s_data_out~107 ; |shift_register|s_data_out~107 ; out              ;
+; |shift_register|s_data_out~208 ; |shift_register|s_data_out~208 ; out              ;
+; |shift_register|s_data_out~209 ; |shift_register|s_data_out~209 ; out              ;
+; |shift_register|s_data_out~210 ; |shift_register|s_data_out~210 ; out              ;
+; |shift_register|s_data_out~211 ; |shift_register|s_data_out~211 ; out              ;
+; |shift_register|s_data_out~212 ; |shift_register|s_data_out~212 ; out              ;
+; |shift_register|s_data_out~213 ; |shift_register|s_data_out~213 ; out              ;
+; |shift_register|s_data_out~214 ; |shift_register|s_data_out~214 ; out              ;
+; |shift_register|s_data_out~215 ; |shift_register|s_data_out~215 ; out              ;
+; |shift_register|s_data_out[8]  ; |shift_register|s_data_out[8]  ; regout           ;
+; |shift_register|s_data_out[7]  ; |shift_register|s_data_out[7]  ; regout           ;
+; |shift_register|s_data_out[6]  ; |shift_register|s_data_out[6]  ; regout           ;
+; |shift_register|s_data_out[5]  ; |shift_register|s_data_out[5]  ; regout           ;
+; |shift_register|s_data_out[4]  ; |shift_register|s_data_out[4]  ; regout           ;
+; |shift_register|s_data_out[3]  ; |shift_register|s_data_out[3]  ; regout           ;
+; |shift_register|s_data_out[2]  ; |shift_register|s_data_out[2]  ; regout           ;
+; |shift_register|s_data_out[1]  ; |shift_register|s_data_out[1]  ; regout           ;
+; |shift_register|s_data_out[0]  ; |shift_register|s_data_out[0]  ; regout           ;
+; |shift_register|clear_in       ; |shift_register|clear_in       ; out              ;
+; |shift_register|enable_in      ; |shift_register|enable_in      ; out              ;
+; |shift_register|reset_in       ; |shift_register|reset_in       ; out              ;
+; |shift_register|data_out[0]    ; |shift_register|data_out[0]    ; pin_out          ;
+; |shift_register|data_out[1]    ; |shift_register|data_out[1]    ; pin_out          ;
+; |shift_register|data_out[2]    ; |shift_register|data_out[2]    ; pin_out          ;
+; |shift_register|data_out[3]    ; |shift_register|data_out[3]    ; pin_out          ;
+; |shift_register|data_out[4]    ; |shift_register|data_out[4]    ; pin_out          ;
+; |shift_register|data_out[5]    ; |shift_register|data_out[5]    ; pin_out          ;
+; |shift_register|data_out[6]    ; |shift_register|data_out[6]    ; pin_out          ;
+; |shift_register|data_out[7]    ; |shift_register|data_out[7]    ; pin_out          ;
+; |shift_register|data_out[8]    ; |shift_register|data_out[8]    ; pin_out          ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |shift_register|s_data_out~99  ; |shift_register|s_data_out~99  ; out              ;
+; |shift_register|s_data_out~100 ; |shift_register|s_data_out~100 ; out              ;
+; |shift_register|s_data_out~101 ; |shift_register|s_data_out~101 ; out              ;
+; |shift_register|s_data_out~102 ; |shift_register|s_data_out~102 ; out              ;
+; |shift_register|s_data_out~103 ; |shift_register|s_data_out~103 ; out              ;
+; |shift_register|s_data_out~104 ; |shift_register|s_data_out~104 ; out              ;
+; |shift_register|s_data_out~105 ; |shift_register|s_data_out~105 ; out              ;
+; |shift_register|s_data_out~106 ; |shift_register|s_data_out~106 ; out              ;
+; |shift_register|s_data_out~107 ; |shift_register|s_data_out~107 ; out              ;
+; |shift_register|s_data_out~207 ; |shift_register|s_data_out~207 ; out              ;
+; |shift_register|s_data_out~208 ; |shift_register|s_data_out~208 ; out              ;
+; |shift_register|s_data_out~209 ; |shift_register|s_data_out~209 ; out              ;
+; |shift_register|s_data_out~210 ; |shift_register|s_data_out~210 ; out              ;
+; |shift_register|s_data_out~211 ; |shift_register|s_data_out~211 ; out              ;
+; |shift_register|s_data_out~212 ; |shift_register|s_data_out~212 ; out              ;
+; |shift_register|s_data_out~213 ; |shift_register|s_data_out~213 ; out              ;
+; |shift_register|s_data_out~214 ; |shift_register|s_data_out~214 ; out              ;
+; |shift_register|s_data_out~215 ; |shift_register|s_data_out~215 ; out              ;
+; |shift_register|s_data_out[9]  ; |shift_register|s_data_out[9]  ; regout           ;
+; |shift_register|s_data_out[8]  ; |shift_register|s_data_out[8]  ; regout           ;
+; |shift_register|s_data_out[7]  ; |shift_register|s_data_out[7]  ; regout           ;
+; |shift_register|s_data_out[6]  ; |shift_register|s_data_out[6]  ; regout           ;
+; |shift_register|s_data_out[5]  ; |shift_register|s_data_out[5]  ; regout           ;
+; |shift_register|s_data_out[4]  ; |shift_register|s_data_out[4]  ; regout           ;
+; |shift_register|s_data_out[3]  ; |shift_register|s_data_out[3]  ; regout           ;
+; |shift_register|s_data_out[2]  ; |shift_register|s_data_out[2]  ; regout           ;
+; |shift_register|s_data_out[1]  ; |shift_register|s_data_out[1]  ; regout           ;
+; |shift_register|s_data_out[0]  ; |shift_register|s_data_out[0]  ; regout           ;
+; |shift_register|clear_in       ; |shift_register|clear_in       ; out              ;
+; |shift_register|enable_in      ; |shift_register|enable_in      ; out              ;
+; |shift_register|reset_in       ; |shift_register|reset_in       ; out              ;
+; |shift_register|data_out[0]    ; |shift_register|data_out[0]    ; pin_out          ;
+; |shift_register|data_out[1]    ; |shift_register|data_out[1]    ; pin_out          ;
+; |shift_register|data_out[2]    ; |shift_register|data_out[2]    ; pin_out          ;
+; |shift_register|data_out[3]    ; |shift_register|data_out[3]    ; pin_out          ;
+; |shift_register|data_out[4]    ; |shift_register|data_out[4]    ; pin_out          ;
+; |shift_register|data_out[5]    ; |shift_register|data_out[5]    ; pin_out          ;
+; |shift_register|data_out[6]    ; |shift_register|data_out[6]    ; pin_out          ;
+; |shift_register|data_out[7]    ; |shift_register|data_out[7]    ; pin_out          ;
+; |shift_register|data_out[8]    ; |shift_register|data_out[8]    ; pin_out          ;
+; |shift_register|data_out[9]    ; |shift_register|data_out[9]    ; pin_out          ;
++--------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Wed Oct 04 18:37:07 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off shift_register -c shift_register
+Info: Using vector source file "C:/Users/Damián/Dropbox/DisLog2/Proyecto/Buffer/testbench/shift_register.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      90.62 %
+Info: Number of transitions in simulation is 20296
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 174 megabytes
+    Info: Processing ended: Wed Oct 04 18:37:08 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

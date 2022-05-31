@@ -1,0 +1,15 @@
+Proyecto: CanOpener.qpf
+Top level entity: CanOpener_top.vhd
+IP core desarrollado: codigo/ip/can_opener_hw.tcl
+Software: codigo/software/can_opener_soft/can_opener_soft.c
+
+-CanOpener_top.vhd 			<- Conecta el SoC con las señales externas:
+	- Clock (50MHz)
+	- Reset (BUTTON2)
+	- Leds (LEDG7-0)
+	- Can RX (GPIO07)
+codigo/ip/can_opener.vhd 	<- Interfaz Avalon
+- buffer_fifo.vhd 			<- Conecta la maquina de estados y el FIFO
+	- fifo80.vhd 			<- FIFO (mega wizard)
+	- controlador_can.vhd 	<- Maquina de estados que decodifica los mensajes
+- freq_div.vhd 				<- Genera el reloj mas lento para el bus can

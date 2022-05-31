@@ -1,0 +1,19 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x00fe2410: ccl_thr + 0x2410 (thr_mutex_lock + 0x20)
+	0x0d8b0f77: pgm_pgme + 0x10f77 (?engage_ocpp_mode@PGME_PROGRAMMER@@QAI_NPAV?$vector@PAVPGM_CHAIN_ELEMENT@@V?$MEM_STL_ALLOCATOR@PAVPGM_CHAIN_ELEMENT@@@@@_Dinkum_std@@@Z + 0x8b7)
+	0x01000000: DDB_DEV + 0x10000 (?write_hdr_to_pdb@DEV_BASIC_INFO_BODY@@QAI_NABVFIO_PATH@@H@Z + 0x120)
+	0x01000000: DDB_DEV + 0x10000 (?write_hdr_to_pdb@DEV_BASIC_INFO_BODY@@QAI_NABVFIO_PATH@@H@Z + 0x120)
+	</callstack>
+	<error>Current editor: RPW, STED, WED, RPW, SFW</error>
+	<date>Mon Nov 20 18:37:22 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X00FE2410
+Current editor: RPW, STED, WED, RPW, SFW
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+

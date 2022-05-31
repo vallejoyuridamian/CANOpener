@@ -1,0 +1,6 @@
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) ip/can_opener_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) ip/can_opener.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) can_opener_inst.vhd]
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu.sdc]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 685D43A8E3D20000015FDB2E288D 
+ 

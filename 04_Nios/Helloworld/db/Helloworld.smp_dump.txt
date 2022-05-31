@@ -1,0 +1,20 @@
+
+State Machine - |DE0_TOP|DE0_SOPC:u0|can_opener_0:the_can_opener_0|buffer_fifo:buffer_fifo_0|controlador_can:inst_buffer|state
+Name state.guardar_mensaje state.lee_end_of_frame state.lee_crc state.lee_data state.lee_control state.lee_arbitraje state.espera_start_of_frame state.estado_inicial 
+state.estado_inicial 0 0 0 0 0 0 0 0 
+state.espera_start_of_frame 0 0 0 0 0 0 1 1 
+state.lee_arbitraje 0 0 0 0 0 1 0 1 
+state.lee_control 0 0 0 0 1 0 0 1 
+state.lee_data 0 0 0 1 0 0 0 1 
+state.lee_crc 0 0 1 0 0 0 0 1 
+state.lee_end_of_frame 0 1 0 0 0 0 0 1 
+state.guardar_mensaje 1 0 0 0 0 0 0 1 
+
+State Machine - |DE0_TOP|DE0_SOPC:u0|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_jtag_debug_module_wrapper:the_cpu_jtag_debug_module_wrapper|cpu_jtag_debug_module_tck:the_cpu_jtag_debug_module_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

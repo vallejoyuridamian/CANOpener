@@ -1,0 +1,44 @@
+Título:
+	Can Opener
+Autores:
+	José Bentancour
+	Damián Vallejo
+Curso:
+	Diseño Lógico 2
+Año: 
+	2017
+Tutor:
+	Leonardo Etcheverry		
+Resumen:	
+	OBDII es un sistema de diagnóstico de vehículos, sucesor de OBDI. Permite
+	detectar fallos eléctricos, químicos y mecánicos que pueden afectar al nivel de emisiones
+	del vehículo. El sistema verifica el estado de todos los sensores involucrados en
+	las emisiones, como por ejemplo la inyección o la entrada de aire al motor. Además
+	es capaz de bridar información en tiempo real como RPM, velocidad o temperarura
+	del líquido refrigerante. ODBII es independiente del protocolo de comunicación pero
+	desde hace ya varias generaciones de vehículos contienen buses de comunicación
+	CAN. Si bien la información que se puede obteber a partir de este estándar está
+	definida, existen otras partes de los sistemas electrónicos que se encuentran en los
+	vehículos modernos que utilizan una comunicación CAN para su operación. Es este
+	tipo de datos que no se encuentran accesibles por el puerto ODBII los que es de
+	interés para este proyecto obtener a través de un mecanismo de ingeniería inversa.
+	Un escáner popular es el ELM327, basado en un microprocesador PIC, con el
+	cual se pudo identificar el bus que se desea investigar: ISO 15765-4 (CAN 11/500).
+	Se implementó un sistema conectando el bus CAN (CAN_H y CAN_L), con ayuda
+	de un chip SN65HVD230 que permite obtener a partir de las líneas diferenciales
+	una se˜ñal binaria de 3.3 V que se conectó a la placa DE0.
+	Dados la complejidad del protocolo a la hora de transmitir y el hecho de que solo
+	se necesita recibir datos, solo se implementó la recepción de mensajes.
+	Finalmete, se realizó una etapa de recepción compuesta por un buffer de lectura
+	que se encarga de leer los bits transmitidos la red CAN, identifica el comienzo y
+	fin de cada mensaje, sus diferentes partes y guarda la información de interés en un
+	registro FIFO. Por otro lado, una etapa de procesamiento de datos y despliegue de
+	información comienza en la lectura del FIFO de la etapa anterior a través de una
+	interfaz Avalon y un programa que se ejecuta en el procesador NIOS de la placa
+	DE0 releva estos datos y los despliega en una consola en una computadora.	
+Referencias:
+		Proyecto de CAN bus hacking (motivación inicial):	
+			- https://theksmith.com/software/hack-vehicle-bus-cheap-easy-part-1/
+			- https://theksmith.com/software/hack-vehicle-bus-cheap-easy-part-2/
+		Descipción del protocolo de comunicación CAN (especificaciones de BOSCH):
+			- http://www.bosch-semiconductors.de/media/ubk_semiconductors/pdf_1/canliteratur/can2spec.pdf

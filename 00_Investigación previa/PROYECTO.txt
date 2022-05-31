@@ -1,0 +1,37 @@
+La idea es hacer un "sniffer" de una red CAN de un auto para encontrar mayor informacion que la brindada por el estandar ODBII.
+- https://theksmith.com/software/hack-vehicle-bus-cheap-easy-part-1/
+- https://theksmith.com/software/hack-vehicle-bus-cheap-easy-part-2/
+Con la ayuda de un conversor de ODBII a Bluetooth, que usa un chip ELM327, sabemos que el bus es ISO 15765-4 (CAN 11/500).
+- ELM327DS.pdf
+- elm327.txt
+- iso_15765-4.pdf
+Una de las opciones para obtener datos del bus CAN es utilizando una placa con interfaz SPI.
+- https://www.google.com.uy/search?q=can+to+spi&source=lnms&tbm=isch&sa=X&ved=0ahUKEwii25Wk57TWAhUBlpAKHSIjCA8Q_AUICigB&biw=1366&bih=672#imgrc=4mNkabQ45VzWbM:
+- MCP2515.pdf
+- TJA1050.pdf
+Dado que la interfaz SPI ya es un estandar muy utilizado proponemos realizar una interfaz CAN - Avalon para utilizarlo directamente con el microprocesador de Altera y tener un SoC que contenga todo.
+Como referencia para realizar la comunicacion CAN tenemos un documento de referenci de BOSCH.
+- BOSCH_CAN_specification2.0.dpf
+Dado la complejidad del protocolo a la hora de transmitir y el hecho de que solo estamos necesitando escuchar, en principio pensamos solo hacer la recepcion.
+Estudiamos proyectos FPGA con bus CAN y encontramos un controlador de código libre en Verilog y una "traducción" a VHDL
+-https://opencores.org/project,can
+-https://opencores.org/project,a_vhdl_can_controller
+
+En ese proyecto se resuelve:
+- Lectura/Escritura en el bus CAN con detección de colisiones 
+- Interfaces: Wishbone SOC, 8051, compatible con SJA1000
+- Direccionamiento y filtrado basado en mensaje
+- Comunicación Broadcast 
+- Operación a 1 Mbps
+
+Nuestra idea es en pricipio hacer solo un receptor. Planeamos implementar esto conectando el bus CAN (CAN_H y CAN_L) a un comparador y la salida de 
+este (Rx) a la placa DE0. En la placa DE0 se implementará un Shift Register que irá recibiendo los bits de Rx y formando la palabra CAN.
+Como las palabras CAN son de largo variable debido al payload, el tamaño del SR será igual a la palabra más larga permitida por el protocolo (108 bits),
+se diseñará un contador que lleve la cuenta de cuántos bits se van guardando en el Shift Register por cada palabra y se obtendrá el largo del mensaje
+del campo DLC (data length code) de la palabra CAN (hasta esa parte del mensaje el largo siempre es fijo). Una vez recibida una palabra completa se guardará en un buffer (FIFO)
+también de largo 108.
+Se diseñará un controlador que identifique e indique el inicio y fin de un mensaje.
+Todo esto se conectará a un SoC Avalon con un procesador soft NIOS II en el cual correrá un programa que lea los mensajes del buffer, los valide (CRC, largo correcto,
+bits de valor obligatorio según su posición, bits de stuffing) y utilizar el puerto VGA de la placa para escribir en un monitor el mensaje recibido.
+Todo esto se conectará al bus CAN de un auto y se realizarán eventos (abrir la ventana, abrochar el cinturón de seguridad, poner el aire acondicionado a
+determinada temperatura) y se intentará deducir qué payload identifica cada evento y los parámetros que correspondan.

@@ -1,0 +1,84 @@
+
+#include "system.h"
+#include "stdio.h"
+#include "sys/alt_stdio.h"
+#include "altera_avalon_pio_regs.h"
+#include "io.h"
+
+void delay(int d){
+    int delay0 = 0;
+    int delay1 = 0;
+    while(delay0 < d*1000){
+        delay0 ++;
+        delay1 = 0;
+        while(delay1 < 1000){
+            delay1 ++;
+        }
+    }
+    return;
+}
+
+bool isEmpty(){
+    unsigned long value = IORD(CAN_OPENER_0_BASE, 0x00);
+    return (value & 0x01000000) > 0;
+}
+
+bool isFull(){
+    unsigned long value = IORD(CAN_OPENER_0_BASE, 0x00);
+    return (value & 0x02000000) > 0;
+}
+
+bool checkCRC(){
+    unsigned long value = IORD(CAN_OPENER_0_BASE, 0x00);
+    return (value & 0x04000000) > 0;
+}
+
+int main()
+{ 
+  alt_putstr("Hello CAN Opener!\n");
+  int count = 0;
+  unsigned long value = 0;
+  
+    // |_______________________________|_______________________________|_______________________________|_______________________________|
+    // |_______________|_______________|_______________|_______________|_______________|_______________|_______________|_______________|
+    // | 0 | 0 | 0 | 0 | 0 |CRC|FUL|EMP| 0 | 0 | 0 | 0 |      LEN      | 0 | 0 | 0 | 0 | 0 |               ADDRESS                     |
+    
+    value = IORD(CAN_OPENER_0_BASE, 0x00);
+    printf("Read0: %lX \n", value);
+    if isEmpty(){
+        printf("Empty!");
+    } else {
+        printf("Not empty!");
+    }
+    if isFull(){
+        printf("Full!");
+    } else {
+        printf("Not full!");
+    }
+    if checkCRC(){
+        printf("CRC Ok!");
+    } else {
+        printf("Bad CRC!");
+    }
+    
+    value = IORD(CAN_OPENER_0_BASE, 0x01);
+    printf("Read1: %lX \n", value);
+    
+    value = IORD(CAN_OPENER_0_BASE, 0x02);
+    printf("Read2: %lX \n", value);
+    
+    value = IORD(CAN_OPENER_0_BASE, 0x03);
+    printf("Read3: %lX \n", value);
+    
+    value = IORD(CAN_OPENER_0_BASE, 0x0F);
+    printf("ReadF: %lX \n", value);
+    
+  /* Event loop never exits. */
+  while (1){
+    IOWR_ALTERA_AVALON_PIO_DATA(PIO_LED_BASE, count & 0x01);
+    count++;    
+    delay(100);
+  };
+
+  return 0;
+}

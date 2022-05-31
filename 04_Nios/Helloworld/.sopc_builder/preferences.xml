@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <systemtable filter="Default">
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" /></columns></systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="298" />
+   <clocksource preferredWidth="296" />
+   <frequency preferredWidth="283" /></columns></clocktable>
+ <window width="1382" height="754" x="-8" y="-8" />
+ <library
+   expandedCategories="Bridges and Adapters,Memories and Memory Controllers/On-Chip,Memories and Memory Controllers,Peripherals/Microcontroller Peripherals,Memories and Memory Controllers/Flash,Interface Protocols,Peripherals,Bridges and Adapters/Memory Mapped,Can" /></preferences>

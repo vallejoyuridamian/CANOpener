@@ -1,0 +1,11 @@
+
+State Machine - |controlador_can|state
+Name state.guardar_mensaje state.lee_end_of_frame state.lee_crc state.lee_data state.lee_control state.lee_arbitraje state.espera_start_of_frame state.estado_inicial 
+state.estado_inicial 0 0 0 0 0 0 0 0 
+state.espera_start_of_frame 0 0 0 0 0 0 1 1 
+state.lee_arbitraje 0 0 0 0 0 1 0 1 
+state.lee_control 0 0 0 0 1 0 0 1 
+state.lee_data 0 0 0 1 0 0 0 1 
+state.lee_crc 0 0 1 0 0 0 0 1 
+state.lee_end_of_frame 0 1 0 0 0 0 0 1 
+state.guardar_mensaje 1 0 0 0 0 0 0 1 

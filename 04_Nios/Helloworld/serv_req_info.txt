@@ -1,0 +1,41 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x060b2381: sld_chi + 0x2381 (?get_jtag_chain@CHI_CONTROL@@SI_NPAV?$list@V?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@V?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@@@@_Dinkum_std@@_N@Z + 0x241)
+	0x74183432: MSVCR90 + 0x23432 (_endthreadex + 0x43)
+	0x741834c6: MSVCR90 + 0x234c6 (_endthreadex + 0xd7)
+	0x76308743: KERNEL32 + 0x18743 (BaseThreadInitThunk + 0x23)
+	0x7787582c: ntdll + 0x6582c (RtlGetAppContainerNamedObjectPath + 0xfc)
+	0x778757fc: ntdll + 0x657fc (RtlGetAppContainerNamedObjectPath + 0xcc)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: STED</error>
+	<date>Mon Nov 06 18:17:20 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X060B2381
+Current editor: STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x010a2410: ccl_thr + 0x2410 (thr_mutex_lock + 0x20)
+	0x0e940f77: pgm_pgme + 0x10f77 (?engage_ocpp_mode@PGME_PROGRAMMER@@QAI_NPAV?$vector@PAVPGM_CHAIN_ELEMENT@@V?$MEM_STL_ALLOCATOR@PAVPGM_CHAIN_ELEMENT@@@@@_Dinkum_std@@@Z + 0x8b7)
+	0xffffffff88888887:
+	0x0fe1fc5b:
+	</callstack>
+	<error>Current editor: RPW, STED, STED, STED</error>
+	<date>Mon Nov 06 19:08:04 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X010A2410
+Current editor: RPW, STED, STED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+

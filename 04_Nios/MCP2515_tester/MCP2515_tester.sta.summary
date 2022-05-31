@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_in'
+Slack : -1.096
+TNS   : -7.552
+
+Type  : Slow 1200mV 85C Model Setup 'FREQ_DIV:can_clock_div|CLK_OUT_AUX'
+Slack : -0.783
+TNS   : -3.842
+
+Type  : Slow 1200mV 85C Model Hold 'clk_in'
+Slack : -0.008
+TNS   : -0.008
+
+Type  : Slow 1200mV 85C Model Hold 'FREQ_DIV:can_clock_div|CLK_OUT_AUX'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_in'
+Slack : -0.860
+TNS   : -6.014
+
+Type  : Slow 1200mV 0C Model Setup 'FREQ_DIV:can_clock_div|CLK_OUT_AUX'
+Slack : -0.607
+TNS   : -2.682
+
+Type  : Slow 1200mV 0C Model Hold 'clk_in'
+Slack : -0.024
+TNS   : -0.024
+
+Type  : Slow 1200mV 0C Model Hold 'FREQ_DIV:can_clock_div|CLK_OUT_AUX'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_in'
+Slack : -0.160
+TNS   : -0.916
+
+Type  : Fast 1200mV 0C Model Setup 'FREQ_DIV:can_clock_div|CLK_OUT_AUX'
+Slack : 0.033
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_in'
+Slack : -0.087
+TNS   : -0.087
+
+Type  : Fast 1200mV 0C Model Hold 'FREQ_DIV:can_clock_div|CLK_OUT_AUX'
+Slack : 0.195
+TNS   : 0.000
+
+------------------------------------------------------------

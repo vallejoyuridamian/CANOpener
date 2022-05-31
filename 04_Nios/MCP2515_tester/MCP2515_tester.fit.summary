@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Nov 15 22:08:05 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Web Edition
+Revision Name : MCP2515_tester
+Top-level Entity Name : MCP2515_tester
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 22 / 15,408 ( < 1 % )
+    Total combinational functions : 21 / 15,408 ( < 1 % )
+    Dedicated logic registers : 15 / 15,408 ( < 1 % )
+Total registers : 15
+Total pins : 2 / 347 ( < 1 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
